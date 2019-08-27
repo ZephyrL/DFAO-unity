@@ -1,0 +1,13 @@
+https://github.com/i-saint/RaymarchingOnUnity5/blob/master/Assets/Raymarching/foundation.cginc#L24-L31
+
+
+https://stackoverflow.com/questions/34532595/how-do-you-write-z-depth-in-a-shader
+
+float compute_depth(float4 clippos)
+{
+#if defined(SHADER_TARGET_GLSL) || defined(SHADER_API_GLES) || defined(SHADER_API_GLES3)
+    return ((clippos.z / clippos.w) + 1.0) * 0.5;
+#else
+    return clippos.z / clippos.w;
+#endif
+}

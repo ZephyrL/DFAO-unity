@@ -1,0 +1,65 @@
+# ===================================== #
+# Unity                                 #
+# ===================================== #
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools*
+/Assets/Exclude
+/Assets/Exclude.meta
+/.idea
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+
+
+# ===================================== #
+# Visual Studio 2015 cache directory
+# ===================================== #
+/.vs/
+
+
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+/obj/
+/debug/
+/Logs
+*.svd
+*.user
+*.userprefs
+*.pidb
+*.suo
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+/*.csproj
+/*.sln
+
+
+
+# ===================================== #
+# Windows                               #
+# ===================================== #
+Thumbs.db
+Desktop.ini
+
+# ===================================== #
+# Mac OS                                #
+# ===================================== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

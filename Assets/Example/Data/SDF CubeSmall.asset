@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9635c321b210a824787bfd12d66edfbc, type: 3}
+  m_Name: SDF CubeSmall
+  m_EditorClassIdentifier: 
+  dimensions: {x: 4, y: 4, z: 4}
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.75, y: 0.75, z: 0.75}
+  voxelSize: {x: 0.375, y: 0.375, z: 0.375}
+  nonUniformScale: {x: 1, y: 1, z: 1}
+  sdfTexture: {fileID: 117963629360762732}
+  maxDistance: 2.598076
+--- !u!117 &117963629360762732
+Texture3D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: sdfData_SDF CubeSmall
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 4
+  m_Height: 4
+  m_Depth: 4
+  m_Format: 15
+  m_MipCount: 1
+  m_DataSize: 128
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_IsReadable: 1
+  image data: 128
+  _typelessdata: 0e2a62286228022a6e28362636269c286e28362636269c28772a81288128d4298d282f262f2674283426b4afb4af2b263426b4afb4af2b2686282f262f2667288d282f262f2674283426b6afbaaf2b263426b6afbaaf2b2686282f262f266728c1298e288e2897298c28292629267f288c28292629267f28e229672867285d29
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 

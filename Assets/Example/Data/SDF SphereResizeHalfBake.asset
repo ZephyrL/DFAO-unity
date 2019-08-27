@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9635c321b210a824787bfd12d66edfbc, type: 3}
+  m_Name: SDF SphereResizeHalfBake
+  m_EditorClassIdentifier: 
+  dimensions: {x: 8, y: 8, z: 8}
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5714286, y: 0.5714286, z: 0.5714286}
+  voxelSize: {x: 0.14285715, y: 0.14285715, z: 0.14285715}
+  nonUniformScale: {x: 1, y: 1, z: 1}
+  sdfTexture: {fileID: 117421302956059386}
+  maxDistance: 1.9794867
+--- !u!117 &117421302956059386
+Texture3D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SDF SphereMipmap_Mipmap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 8
+  m_Depth: 8
+  m_Format: 15
+  m_MipCount: 1
+  m_DataSize: 1024
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_IsReadable: 1
+  image data: 1024
+  _typelessdata: 1433cc31ec30623039309d3054316332c9317c30f62eb62d8c2d372ed82f2031e430ed2eb82cbc2a482af12bc12d2d306830b32dd02ab427b82618297a2c392f38307b2d2d2a7c2688258d28372ce82e96302b2edd2b07299828462afd2ca12f4331df2fad2d702c322cfa2cb02e8f305a320d311e30352fee2ea72f8f30b531e0316e30e82ebe2d8c2d392ed92f23316e30fd2d532b6e28c327a829b32c5c2ff82e4f2b3424b5a050a350129128412dba2d6828ada0c4a883a9a4a60d22da2b722d9727b9a39ba966aa25a8a11e532b312e8d29f907cca61da813a44625782cdb2fa62c7f28c121e61e5225b22a382e0f315d2f372dd02b672b782c2e2e5430e630e82eb82cb92a422afb2bb72d2330e42e5a2b3a24a6a058a339128d284b2db22c36243ca81cac91ac8eaafda0ba29c32aa4a01cac9dae27af8badcba87b252b2abda39cac33afc7af10aeaba94a24d52b0b079faa90ad11aea4acc1a6d827b22d7a282aa1dba8a5a9c9a60721da2b27303c2db8295b255524e227c92b972e5930ba2db62aa827b2262429772c282fc22d6c28a9a0c5a88ba9a9a60c22ec2bc82aa8a01faca2ae2faf8aadc7a88125ad27c3a8a0ae0eb17fb13eb084ac4c9c7d26a5a939af84b11bb2a1b0ffacd6a00d29d3a694ad3cb09eb037af46abe61d6c2cc021d5a888ac06ad47abf8a3f0282b2fdf2b5f25a69cb8a0171eec28742d4130842d4c2aaa26a025ab283c2c022f7b2dd12752a388a953aa08a88c1f732b482a58a38dac2bafc2af0bae92a97324ae268ca930af84b11bb29cb0fdac84a0822569aac8af1fb20cb309b181ad50a3932819a819aea0b00ab1d7af18ac5115332cf91e9ea9feac7bad11ac5fa57528f82e5c2b5124b1a027a3761672282b2d9f30382ee52b2129a628642a0d2da42f432eab293c12a5a609a8d3a36f25832ce72b3e1291aa88ad03ae9dac96a60a282629a4a68bad3db09bb031af36ab801e8f281ca812ae9cb008b1ddaf18ac7a144e2a0ca4a3ac3bafd5af1eaeaea91424032d4b25c2a656ab13acaaa95d9d232a9b2f792ce7271b1e77162924202af42d5131d22fb72d792c462c062db62e9630d82fb92c93280922821f7525cd2a3a2ec12d8c28e6a0cca892a99ea64c21de2b742c0922caa87eacf5ac42abb6a3fe282d2cbf1eaca903ad7dad18ac72a56928fe2c4425cba654ab17acafa97c9d252ab42ec02a0021fba35ea55f9d6327dd2c9130282ec62bef287428202aee2c992f6e3221312d30312ffa2eac2f9430b63119315f2f3f2de12b6d2b802c422e55302730442dc729782571240328d92bb22e3e2fe32b7b253c9c7fa0791e00296a2ded2e5c2b4324d2a04ea359146c28312d9f2f772cd627dc1d86151624252af52d8f30352ec02bf1286c28262aef2ca62fb9314f30ae2e7b2d302dfd2d8d2fed30
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 

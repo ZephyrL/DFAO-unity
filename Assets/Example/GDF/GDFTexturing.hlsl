@@ -133,6 +133,15 @@ inline float GDFTex3D(in float3 pos, in float3 min, in float3 max, in Texture3D 
     return dist * length(max - min);
 }
 
+inline float GDFTex3DLOD(in float3 pos, in float3 min, in float3 max, in Texture3D tex, in int level)
+{
+	float3 uvPos = (pos - min) / (max - min);
+	uvPos = saturate(uvPos);
+	float dist = tex.SampleLevel(gdf_sampler_trilinear_clamp, uvPos, level).r;
+
+	return dist * length(max - min);
+}
+
 inline float2 GDFTex3DAll(in float3 pos, in float3 min, in float3 max, in Texture3D tex)
 {
     float3 uvPos = (pos - min) / (max - min);

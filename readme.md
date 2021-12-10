@@ -1,4 +1,6 @@
-This project is using an offline SDF baker (SDFr) to precompute object local SDF, and maintaining a global distance field at runtime.
+This project is using an offline [SDF baker (SDFr)](https://github.com/xraxra/SDFr) to precompute object local SDF, and maintaining a global distance field at runtime.
+
+To create the shadowing effect we applied the ray marching method, casting view rays from the camera to the scene. The Distance function is represented by a two-level SDF structure, where the distance in ray marching steps is first queried from a Global Distance Field (GDF) and then the local SDF of the object
 
 The current shadowing functions run at about 120 fps, while I guess it would be more suitable for static scene with a few moveable objects, which means that you'd better to use it for things that seldom change or move, to avoid efficiency issues. 
 

@@ -1,5 +1,7 @@
 ## Introduction
-This project is using an offline [SDF baker (SDFr)](https://github.com/xraxra/SDFr) to precompute object local SDF, and maintaining a global distance field at runtime.
+This project use two-level hierarchical SDF and ray marching to render AO and soft shadow. 
+
+The computation of objects' local SDF depends on [SDF baker (SDFr)](https://github.com/xraxra/SDFr). Beside local SDF's, a global SDF is maintained and lazily updated during runtime, guiding the beginning steps of ray marching, and roughly locating the movable objects.
 
 ## Usage
 
@@ -39,6 +41,8 @@ The current shadowing pass cost about 4-6ms on my Nvidia GTX 1660Ti, under HD re
 
 In general, this method works better with static scene and limited number of moveable objects.
 
-There are some slides with videos for this project [here](https://drive.google.com/file/d/10ICPY05gsmkJ11PfgKT2xEUlrhfY8__h/view?usp=sharing), originally it was not in English and was converted by google translate, please check it you'd like to, you're also welcome to ask any questions via Issues.
+There are some slides with videos for this project [here](https://drive.google.com/file/d/10ICPY05gsmkJ11PfgKT2xEUlrhfY8__h/view?usp=sharing), noting the presentation was in Chinese and then converted into English, feel free to download at your needs. 
+
+Discussions are also very welcome, for any thoughts or questions, please post in issues.
 
 ![screenshot](screencaps/screenshot2.png)

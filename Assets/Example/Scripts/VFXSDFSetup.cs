@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using SDFr;
 using UnityEngine;
-using UnityEngine.Experimental.VFX;
+using UnityEngine.VFX;
 using UnityEngine.Rendering;
 
 [ExecuteInEditMode]

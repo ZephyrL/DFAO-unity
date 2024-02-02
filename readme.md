@@ -1,13 +1,44 @@
+## Introduction
 This project is using an offline [SDF baker (SDFr)](https://github.com/xraxra/SDFr) to precompute object local SDF, and maintaining a global distance field at runtime.
 
-To create the shadowing effect we applied the ray marching method, casting view rays from the camera to the scene. The Distance function is represented by a two-level SDF structure, where the distance in ray marching steps is first queried from a Global Distance Field (GDF) and then the local SDF of the object
+## Usage
 
-The current shadowing functions run at about 120 fps, while I guess it would be more suitable for static scene with a few moveable objects, which means that you'd better to use it for things that seldom change or move, to avoid efficiency issues. 
+This repository is now upgraded to Unity 2021.3 .
 
-There are some slides with videos for this project [here](https://drive.google.com/file/d/10ICPY05gsmkJ11PfgKT2xEUlrhfY8__h/view?usp=sharing), originally it was not in English and was converted by google translate, please check it you'd like to, you're also welcome to ask any questions via Issues. 
+Clone the code and open the scene in Example/Scenes/RayMarchExample, hit "Play" and the runtime view should look like the screenshot below.
 
-Other than the slides, you may get a preview of the results from the following screenshots.
+To play the demo with more custom meshes, you may 
+1. Import the mesh as an object first, and then
+2. Add the script component "SDF baker" to the object, which you could find in the project.
+3. Use the SDFr tool, Encapsulate to optimize the bounding box, then bake distance field for the object
+4. Remember to save the SDF data as asset.
+
+You may create duplicates or instances of the object, for runtime performance, same or similar objects is recommended to share the same SDF data.
 
 ![screenshot preview](screencaps/screenshot.png)
+
+## Thoughts
+
+In this demo I use ray marching to create the AO and penumbra effect, casting view rays from the camera to the scene. 
+
+The Distance function is represented by a two-level SDF structure, where the distance in ray marching steps is first queried from a Global Distance Field (GDF) and then the local SDF of the object.
+
+To make smooth the transition between global SDF and local SDF inside object's bounding box, a conservative addition of the distances is introduced, so that the ray marching steps can precisely hit the closest surface point of the object. 
+
+![illust01](screencaps/Illust01.png)
+
+However, the conservative sum of distance may result in the more march steps, when the angle bewteen view ray and the rim of the object's bounding box is close to 0 degree. 
+
+![illust02](screencaps/Illust02.png)
+
+Regarding the addition of global distance and local distance, we have a few discussion: using Sqrt root of 2-powered is still conservative and more precise, reducing the number of steps. 
+
+## Stats
+
+The current shadowing pass cost about 4-6ms on my Nvidia GTX 1660Ti, under HD resolution. Noting that this effect is closely related to screen size, due to the nature of ray marching algorithm. However, custom optimization can be applied for higher resolution, such as lowring the sample rate, or use adaptive-resolution rendering for this shadow pass.
+
+In general, this method works better with static scene and limited number of moveable objects.
+
+There are some slides with videos for this project [here](https://drive.google.com/file/d/10ICPY05gsmkJ11PfgKT2xEUlrhfY8__h/view?usp=sharing), originally it was not in English and was converted by google translate, please check it you'd like to, you're also welcome to ask any questions via Issues.
 
 ![screenshot](screencaps/screenshot2.png)

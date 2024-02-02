@@ -12,11 +12,13 @@ CustomRenderTexture:
     Hash: 00000000000000000000000000000000
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
-  serializedVersion: 3
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
   m_Width: 128
   m_Height: 128
   m_AntiAliasing: 1
-  m_DepthFormat: 0
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
   m_ColorFormat: 50
   m_MipMap: 0
   m_GenerateMips: 1
@@ -24,6 +26,7 @@ CustomRenderTexture:
   m_UseDynamicScale: 0
   m_BindMS: 0
   m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
   m_TextureSettings:
     serializedVersion: 2
     m_FilterMode: 1
@@ -34,6 +37,7 @@ CustomRenderTexture:
     m_WrapW: 1
   m_Dimension: 3
   m_VolumeDepth: 128
+  m_ShadowSamplingMode: 2
   m_Material: {fileID: 2100000, guid: 9dfd22f0eda4afd48b519aeb9fb2386f, type: 2}
   m_InitSource: 1
   m_InitMaterial: {fileID: 2100000, guid: c0cb3ee585f440e4394c8df9c09310f2, type: 2}
